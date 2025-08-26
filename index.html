@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amora - Your Family Social Media & Media Hub</title>
+    <meta name="description" content="Create family groups, share memories, and manage events with AI-powered media tools">
+    <meta name="keywords" content="family, social media, photo sharing, events, memories, AI tools">
+
+    <meta property="og:title" content="FamilyHub - Your Family Social Media & Media Hub">
+    <meta property="og:description" content="Create family groups, share memories, and manage events with AI-powered media tools">
+    <meta name="twitter:title" content="FamilyHub - Your Family Social Media & Media Hub">
+    <meta name="twitter:description" content="Create family groups, share memories, and manage events with AI-powered media tools">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #f0f9ff;
+            --accent-color: #06b6d4;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --border-color: #e5e7eb;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --error-color: #ef4444;
+        }
+    }
+
+    @layer base {
+        body {
+            @apply bg-gray-50 text-[var(--text-primary)] font-sans;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply px-6 py-3 bg-[var(--primary-color)] text-white rounded-lg font-medium hover:opacity-90 transition-opacity;
+        }
+        
+        .btn-secondary {
+            @apply px-6 py-3 bg-white text-[var(--primary-color)] border-2 border-[var(--primary-color)] rounded-lg font-medium hover:bg-[var(--secondary-color)] transition-colors;
+        }
+        
+        .card {
+            @apply bg-white rounded-xl shadow-md p-6 border border-[var(--border-color)];
+        }
+        
+        .input-field {
+            @apply w-full px-4 py-3 border border-[var(--border-color)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent;
+        }
+        
+        .nav-link {
+            @apply flex items-center space-x-2 px-4 py-3 rounded-lg text-[var(--text-secondary)] hover:bg-[var(--secondary-color)] hover:text-[var(--primary-color)] transition-colors;
+        }
+        
+        .nav-link.active {
+            @apply bg-[var(--primary-color)] text-white;
+        }
+    }
+
+    @layer utilities {
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/Sidebar.js"></script>
+    <script type="text/babel" src="components/FamilyCard.js"></script>
+    <script type="text/babel" src="components/CreateFamilyModal.js"></script>
+    <script type="text/babel" src="components/EventCard.js"></script>
+    <script type="text/babel" src="components/MediaGrid.js"></script>
+    <script type="text/babel" src="components/ProfileCard.js"></script>
+    <script type="text/babel" src="components/ChatWidget.js"></script>
+    <script type="text/babel" src="components/AIToolsModal.js"></script>
+    <script type="text/babel" src="components/MediaEditorModal.js"></script>
+    <script type="text/babel" src="utils/database.js"></script>
+    <script type="text/babel" src="utils/aiTools.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
